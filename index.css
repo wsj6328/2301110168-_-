@@ -1,0 +1,264 @@
+body{
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#toc{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    border-bottom: solid 1px white;
+    background-color: black;
+}
+
+#toc ul{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+#toc a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container{
+    width: 1500px;
+    height: 980px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    font-size: 40px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.section{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 980px;
+}
+
+h2{
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    margin-top: 180px;
+}
+
+h1{
+    font-size: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pro_img{
+    width: 300px;
+    height: 400px;
+    background: url(img/IMG_3671.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+.name{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+}
+
+.name h3{
+    margin-left: 20px;
+    line-height: 50px;
+}
+
+.wjdqh{
+    width: 200px;
+    height: 180px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+}
+
+.wjdqh h3{
+    margin-left: 20px;
+    line-height: 50px;
+}
+
+.wjdqh p{
+    margin-left: 20px;
+}
+
+.gkrfur{
+    width: 380px;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+}
+
+.gkrfur h3{
+    margin-left: 20px;
+    line-height: 50px;
+}
+
+.gkrfur p{
+    margin-left: 20px;
+}
+
+.img_box{
+    width: 150px;
+    margin-right: 100px;
+}
+
+.img_box img{
+    margin-top: 20px;
+}
+
+.gage{
+    width: 500px;
+    height: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 130px;
+    margin-top: 10px;
+}
+
+.g_box{
+    width: 100%;
+    height: 80px;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.g_cor1{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.g_cor2{
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.g_cor3{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.back-to-position{
+    opacity: 0;
+    transition: 1s;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+.show .back-to-position{
+    opacity: 1;
+    transform: translateX(0);
+}
+.show .back-to-position.delay-0{
+    transition-delay: 0s;
+}
+.show .back-to-position.delay-1{
+    transition-delay: .3s;
+}
+
+.swiper {
+    margin-top: 100px;
+    width: 1300px;
+    height: 500px;
+    margin-top: 200px;
+    opacity: 0; /* 초기 상태 숨기기 */
+    transform: translateY(50px); /* 초기 상태 아래로 이동 */
+    transition: opacity 2s ease, transform 2s ease; /* 애니메이션 지속 시간 늘리기 */
+}
+
+/* 보이는 상태로 전환 */
+.swiper.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w_img1{
+    background-image: url(img/메인페이지.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.w_img2{
+    background-image: url(img/디지털.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.w_img3{
+    background-image: url(img/2301110168\ 우수지_보조배터리_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.w_img4{
+    background-image: url(img/캡처.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.w_img5{
+    background-image: url(img/대지\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}

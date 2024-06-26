@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="toc">
+        <ul>
+            <li><a href="#header1">HOME</a></li>
+            <li><a href="#header2">MY PROFILE</a></li>
+            <li><a href="#header3">SKILLS</a></li>
+            <li><a href="#header4">PORTFOLIO</a></li>
+        </ul>
+    </div>
+    <section class="section scroll-spy" id="header1">
+        <div class="container">
+            <h1>My Design Portfolio <br>
+                <span>우수지의 디자인 포트폴리오</span>
+            </h1>
+        </div>
+    </section>
+    <section class="section scroll-spy" id="header2">
+        <div class="container">
+            <h2>My Profile</h2>
+            <div class="box back-to-position to-right delay-0">
+                <div class="pro_img"></div>
+            </div>
+            <div class="box back-to-position to-left delay-1">
+                <div class="name">
+                    <h3>이름: 우수지</h3>
+                </div>
+                <div class="wjdqh">
+                    <h3>내 정보</h3>
+                    <p>2004.06.26</p>
+                    <p>010-5586-4257</p>
+                    <p>sujiqkrk@gmail.com</p>
+                </div>
+                <div class="gkrfur">
+                    <h3>학력</h3>
+                    <p>덕현고등학교 졸업</p>
+                    <p>한국폴리텍 정수캠퍼스 시각디자인과 졸업예정</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section scroll-spy" id="header3">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="box back-to-position to-right delay-0">
+                <div class="img_box">
+                    <img src="img/Adobe_Illustrator_CC_icon.svg.png" alt="" width="150px">
+                    <img src="img/skQ1Z0FtH_GpW136xD6eCuUcP9P0fTsSEMbiK5rEn27jplAF7xGde8V4iLq91BGv4XElHbPiTY1HKA0rcAbGkCIMYFBePZE5FS4HhDxgcE5SkEl0_sA4PXTDE3Tv90Qj8K325lx9exyHaks4_0Cd9A.svg" alt="" width="150px">
+                    <img src="img/aa5Ofg_q1jpmUsxyXYAD1f6W5hfLIroPlsfAeTmSHW7nmlFTEE94JdZCDiFooI-I8WjCGyv9x25wrXa1Bf4osBUUxkVL1OgNy-tKgyhCA1UEjHOgXrd-0GQwcQCGP31ULX_eZmINeN6nS-vt9RBJfw.webp" alt="" width="150px">
+                </div>
+            </div>
+            <div class="box back-to-position to-left delay-1">
+                <div class="gage">
+                    <div class="g_box"><div class="g_cor1"></div></div>
+                    <div class="g_box"><div class="g_cor2"></div></div>
+                    <div class="g_box"><div class="g_cor3"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section scroll-spy" id="header4">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="w_img1"></div></div>
+                    <div class="swiper-slide"><div class="w_img2"></div></div>
+                    <div class="swiper-slide"><div class="w_img3"></div></div>
+                    <div class="swiper-slide"><div class="w_img4"></div></div>
+                    <div class="swiper-slide"><div class="w_img5"></div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+        });
+    </script>
+
+    <script>
+        const spyEls = document.querySelectorAll('section.scroll-spy');
+        const controller = new ScrollMagic.Controller();
+
+        spyEls.forEach(function (spyEl){
+            new ScrollMagic.Scene({triggerElement: spyEl})
+            .setClassToggle(spyEl, 'show')
+            .addTo(controller)
+        })
+
+        const swiperEl = document.querySelector('.swiper');
+
+        window.addEventListener('scroll', function() {
+            const swiperPosition = swiperEl.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (swiperPosition < windowHeight && swiperPosition > 0) {
+                swiperEl.classList.add('show');
+            } else {
+                swiperEl.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('#toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
